@@ -12,6 +12,7 @@ source("fetch_shots.R")
 source("hex_chart.R")
 source("scatter_chart.R")
 source("heatmap_chart.R")
+source("bar_chart.R")
 
 shinyUI(fixedPage(
   
@@ -31,10 +32,6 @@ shinyUI(fixedPage(
                    uiOutput("shot_filters_applied"),
                    
                    uiOutput("shot_chart_footer")
-               ),
-               
-               div(class = "download-link-container",
-                   uiOutput("download_link")
                ),
                
                h3(textOutput("summary_stats_header")),
@@ -59,7 +56,7 @@ shinyUI(fixedPage(
                    
                    radioButtons(inputId = "chart_type",
                                 label = "Chart Type",
-                                choices = c("Hexagonal", "Scatter", "Heat Map"),
+                                choices = c("Hexagonal", "Scatter", "Heat Map", "Bar Chart"),
                                 selected = "Hexagonal"),
                    
                    uiOutput("hex_metric_buttons"),

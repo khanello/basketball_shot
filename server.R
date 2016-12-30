@@ -134,6 +134,8 @@ shinyServer(function(input, output, session) {
       generate_scatter_chart(filtered_shots(), use_short_three = short_three)
     } else if (input$chart_type == "Heat Map") {
       generate_heatmap_chart(filtered_shots(), use_short_three = short_three)
+    } else if (input$chart_type == "Bar Chart") {
+      generate_bar_chart(filtered_shots())
     } else {
       stop("invalid chart type")
     }
@@ -153,7 +155,7 @@ shinyServer(function(input, output, session) {
     req(shots()$player)
     paste0(unique(shots()$player$team_name), collapse = ", ")
   })
-
+  
   
   output$player_photo = renderUI({
     if (input$player_name == "") {
