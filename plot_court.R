@@ -109,3 +109,4 @@ short_three_court = ggplot() +
   scale_linetype_manual(values = c("solid", "longdash"), guide = FALSE) +
   coord_fixed(ylim = c(0, 35), xlim = c(-25, 25)) +
   theme_court(base_size = 22)
+
