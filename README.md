@@ -7,7 +7,7 @@ packages = c("shiny", "ggplot2", "hexbin", "dplyr", "httr", "jsonlite", "shinyth
 install.packages(packages, repos = "https://cran.rstudio.com/")
 library(shiny)
 library(shinythemes)
-runGitHub("basketball_shots", "khanello")
+runGitHub("basketball_shot", "khanello")
 ```
 
 
